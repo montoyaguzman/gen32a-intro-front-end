@@ -1,11 +1,11 @@
 const http = require('http');
-
+const port = 5500;
 const server = http.createServer((request, response) => {
     // Obtener info de una api, por medio de que lo hago?
     // url, method/verb (GET, POST, PUT, PATCH, DELETE)
     // Generar una response
     // status, response content, mymeType
-    const status = 500;
+    const status = 200;
     const mimeType = { 'Content-type': 'text/html' };
     const contentResponse = '<html> <body> Hola desde node chicos... </body> </html>';
     response.writeHead(status, mimeType);
@@ -13,6 +13,6 @@ const server = http.createServer((request, response) => {
     response.end();
 });
 
-server.listen(5500);
+server.listen(port);
 
-console.log('servidor JOYA en el puerto:', 5500);
+console.log('servidor JOYA en el puerto:', port);
