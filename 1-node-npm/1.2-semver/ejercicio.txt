@@ -1,0 +1,50 @@
+7
+8
+9
+10
+99
+100
+
+
+Bootstrap
+    5.0.1
+        El JS que muestra el carrousel imgs solo aceptan 4 imgs, cuando mas no muestra ninguna images
+    5.0.2
+        MaterizalizeCSS tiene el efecto olgas y nuestros usuarios quieren que bootstrap tambien lo tenga 
+        class="button-cl" => class="button-cl waves"
+    5.1.0
+        Todas las clases que se llaman col ahora se van llamar column
+        class="col-6" => class="column-6"
+    6.0.0
+
+    Colors
+        4.0.0
+            El fucsia no esta bien escrito aparece como fiusa en vez de fiucsa
+        4.0.1
+            agregar 20 colores nuevos porque la empresa
+        4.1.0
+            se van a agregar 5 colores.
+        4.2.0
+            expandio su paleta de colores y se van a eliminar 3 colores existentes porque producian efectos
+            sicoticos
+        5.0.0
+        
+        
+Ejemplo 4: GTA (San andreas)
+    3.0.0
+        no se ven los coches mustang, solo se una marca negra
+    ???
+        el personaje de Juanito no se puede seleccionar
+    ??? 
+        agregar inclusividad/diversidad juanitx
+    
+    ??? 
+        la nueva temporada en linea no deja cobrar las recompensas
+    
+    ??? 
+        Las personas que jugaban GTA ya se lo han terminado y el publico quiere ver
+    escenarios, personajes y retos nuevos
+    
+    ??? 
+        En la nueva version de GTA se noto que era muy necesario agregar la conversion entre USD/EURO/MXN
+
