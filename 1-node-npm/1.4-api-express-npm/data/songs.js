@@ -5,15 +5,8 @@ const songs = [
     { id: 4, name: 'Gasolina', artist: 'Daddy Yankee', year: 2002 },
 ];
 
-function sum() {
-    // do something
-}
-
-const resta = () => {
-    // doSomething
-}
-
 // common js (export)
-module.exports = {
-    songs: songs,
-};
+// module.exports = {
+//     songs: songs,
+// };
+export { songs };
