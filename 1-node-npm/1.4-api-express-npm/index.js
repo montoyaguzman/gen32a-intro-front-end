@@ -1,4 +1,5 @@
 const express = require('express');
+const colors = require('colors');
 const app = express();
 const port = 3000;
 
@@ -11,7 +12,7 @@ const songs = [
 ];
 
 app.get('/', (req, res) => {
-    res.send('<html> <body> Hola desde express chicos... </body> </html>');
+    res.send('<html> <body> Hola desde express a todos... </body> </html>');
 });
 
 app.get('/songs', (req, res) => {
@@ -19,5 +20,5 @@ app.get('/songs', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log('servidor JOYA en el puerto:', port);
+    console.log(`servidor JOYA en el puerto:${port}`.rainbow);
 });
