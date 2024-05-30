@@ -2,15 +2,22 @@ import { useState } from "react"
 import { Container, Row } from "react-bootstrap"
 import NavBar from "./components/NavBar"
 import InputForm from "./components/InputForm"
+import TaskList from "./components/TaskList"
 
 
 function App() {
 
   const [Tareas, setTareas] = useState([])
 
-   const handleSubmit = (e) => {
+  const handleSubmit = (e, tarea) => {
     e.preventDefault();
-     setTareas([...Tareas, e.target[0].value])
+    const task = {
+      id: Tareas.length + 1,
+      titulo: tarea,
+      completed: false
+    }
+    
+    setTareas([...Tareas, task])
      //utiliza lo que tengas en el arreglo de Tareas y agrega lo que tengas en el input
   }
 
@@ -26,11 +33,14 @@ function App() {
             labelTitle='Agrega Una Tarea'
             buttonLabel='Agregar'
             placeholder='Ingresa una Tarea'
-            handleSubmit={handleSubmit}
+            handleSubmitFromApp={handleSubmit}
           />
-          {
-            Tareas
-          }
+          <TaskList
+            titulo='Lista de Tareas desde App'
+            tareas={Tareas}
+            setTareas={setTareas}
+          />
+          
         </Row>
 
       </Container>
