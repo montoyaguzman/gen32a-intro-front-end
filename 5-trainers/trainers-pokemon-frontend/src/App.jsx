@@ -1,4 +1,5 @@
-import './App.css'
+import './App.css';
+import { Home } from './pages/Home/';
 
 function App() {
 
@@ -7,8 +8,9 @@ function App() {
       <div>
         App Trainers works!
       </div>
+      <Home />
     </>
   )
 }
 
-export default App
+export { App };
