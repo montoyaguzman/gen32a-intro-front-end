@@ -1,0 +1,51 @@
+Requerimientos
+- Maqueta (figma, sketch, canva, ppt, hoja papel) y Api (express, consumir un api publica existente, json server, archivo.json)
+
+MVC (php - laravel)
+front - api - back
+SSR (Server side render)
+
+Router
+Routes
+
+react-router-dom (componentes, useRoutes)
+
+
+// funciones flecha
+const handleInput = (event) => {
+
+}
+export { InputForm } 
+import { InputForm } from '/////'
+
+
+X + Y
+
+
+
+
+// funciones tradicionales de js
+function handleInput(event) {
+
+}
+
+export default InputForm
+
+import InputForm from '/////'
+
+M + B
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
