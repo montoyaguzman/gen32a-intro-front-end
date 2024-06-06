@@ -9,14 +9,20 @@ function Home() {
 
     const [trainers, setTrainers] = useState([]);
     const [counter, setCounter] = useState(0);
+    const [params, setParams] = useState({});
 
-    const getData = async () => {
-        const newTrainers = await getTrainers();
+    const getData = async (params) => {
+        const newTrainers = await getTrainers(params);
         setTrainers(newTrainers);
     };
 
     const handleNumber = () => {
         setCounter(counter + 1)
+    }
+
+    const handleParams = ({ trainerName, isChampion }) => {
+        const newParams = { trainerName, isChampion };
+        setParams(newParams);
     }
 
     // 1. El useEffect no tiene condiciones:
@@ -36,6 +42,10 @@ function Home() {
         console.log('Ejecutando el useEffect cuando cambia counter');
     }, [counter]);
 
+    useEffect(() => {
+        getData(params);
+    }, [params]);
+
     return (
         <>
 
@@ -44,7 +54,7 @@ function Home() {
                 <span>El numero es: {counter}</span>
             </div>
 
-            <SearchBar />
+            <SearchBar handleParams={handleParams} />
 
             <ListCard>
 

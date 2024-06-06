@@ -1,10 +1,20 @@
 import './index.css'
 
-function SearchBar() {
+function SearchBar({ handleParams }) {
 
     const handleForm = (event) => {
         event.preventDefault();
-        // do something
+
+        // console.log(event);
+        // console.log(event.target);
+
+        const formElement = event.target;
+        const formData = new FormData(formElement);
+
+        const trainerName = formData.get('trainer-name');
+        const isChampion = formData.get('isChampion');
+
+        handleParams({ trainerName, isChampion });
 
     }
 
