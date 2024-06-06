@@ -55,8 +55,10 @@ function Home() {
                                 <Card
                                     key={index}
                                     name={trainer.name}
+                                    image={trainer.imgs.card}
                                     region={trainer.region.name}
                                     rank={trainer.rank}
+                                    team={trainer.team}
                                 />
                             )
                         })
