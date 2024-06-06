@@ -1,6 +1,6 @@
 import './index.css';
 
-function Card() {
+function Card({ name, region, rank }) {
     return (
         <>
             <div className='container-card'>
@@ -10,13 +10,13 @@ function Card() {
                 </div>
                 <div className="card-content">
                     <div className="stats">
-                        <p className="region-tag">kanto</p>
+                        <p className="region-tag">{region}</p>
                         <div className="rank">
                             <p className="rank-label">rango</p>
-                            <p className="rank-tag">21</p>
+                            <p className="rank-tag">{rank}</p>
                         </div>
                     </div>
-                    <h2 className="title">Ash Ketchum</h2>
+                    <h2 className="title">{name}</h2>
 
                     <div className="team">
                         <h3 className="team-label">Equipo</h3>
