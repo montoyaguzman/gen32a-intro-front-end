@@ -37,15 +37,110 @@ M + B
 
 
 
+Page
+Un componente que contiene o se arma a partir de muchos componentes y es un una feature 
+para el usuario.
+Una vista o una pantalla especifica que nos pidan en el diseño o maquetado.
 
 
+Componente o web componente
+Unidad tan pequeña como el dev considere que le permita encapsular parte de la vista y funcionalidad
+del sistema o pagina que se este desarrollando.
 
 
+PROMPT
+Soy un desarrador que tiene 6 meses de experiencia en html y css.
+Actualmente estoy react y me cuesta identificar cual seria la logica y buenas practicas para elegir que seria un componente y que no, pudieras darme algunos tips en cuestion de analisis, buenas practicas para saber como modularizar mis componentes.
+ChatGPT
+Claro, modularizar componentes en React es fundamental para mantener tu código limpio, reutilizable y fácil de mantener. Aquí tienes algunos consejos y buenas prácticas para identificar y crear componentes:
 
 
+RESPUESTA DE ChatGPT
+1. Identificar Componentes
+Reutilización: Si ves que un bloque de UI se repite en varios lugares, es un buen candidato para ser un componente. Por ejemplo, botones, tarjetas de usuario, etc.
+Un solo propósito: Cada componente debe tener una única responsabilidad. Si un componente hace demasiadas cosas, es probable que deba dividirse.
+Separación por funcionalidad: Agrupa elementos que tienen una funcionalidad similar. Por ejemplo, un componente Header podría contener elementos como el logo, el menú de navegación y el botón de búsqueda.
+2. Tipos de Componentes
+Presentacionales vs Contenedores:
+Presentacionales: Se enfocan en cómo se ve algo. No tienen estado o lógica de negocio, solo reciben props y renderizan contenido. Ejemplo: Button, Card.
+Contenedores: Manejan la lógica de negocio y el estado. Pueden contener componentes presentacionales. Ejemplo: UserListContainer.
+3. Buenas Prácticas para Modularizar
+Prop Drilling: Pasa información mediante props de padres a hijos. Evita pasar props innecesarios y considera el uso de Context API o Redux si el paso de props se vuelve complejo.
+Componentes pequeños y específicos: Es preferible tener muchos componentes pequeños y específicos en lugar de pocos componentes grandes y generales.
+Composición sobre herencia: Prefiere componer componentes (usar componentes dentro de otros) en lugar de crear jerarquías de herencia complicadas.
+Nombres significativos: Elige nombres claros y descriptivos para tus componentes. Por ejemplo, UserProfile en lugar de Profile.
+4. Organización de Archivos
+Directorio de componentes: Crea una carpeta components y organiza tus componentes dentro de subcarpetas según su funcionalidad.
+Un archivo por componente: Cada componente debe tener su propio archivo para facilitar su mantenimiento.
+Indexación: Si tienes múltiples componentes en una carpeta, puedes tener un archivo index.js para exportar todos ellos, facilitando las importaciones.
+5. Ejemplo de Componentización
+Supongamos que tienes una página de perfil de usuario. Podrías dividirla en varios componentes:
 
+jsx
+Copiar código
+// UserProfile.js
+import React from 'react';
+import UserAvatar from './UserAvatar';
+import UserInfo from './UserInfo';
+import UserPosts from './UserPosts';
 
+const UserProfile = ({ user }) => (
+  <div>
+    <UserAvatar avatarUrl={user.avatarUrl} />
+    <UserInfo name={user.name} bio={user.bio} />
+    <UserPosts posts={user.posts} />
+  </div>
+);
 
+export default UserProfile;
+
+// UserAvatar.js
+import React from 'react';
+
+const UserAvatar = ({ avatarUrl }) => (
+  <img src={avatarUrl} alt="User Avatar" />
+);
+
+export default UserAvatar;
+
+// UserInfo.js
+import React from 'react';
+
+const UserInfo = ({ name, bio }) => (
+  <div>
+    <h2>{name}</h2>
+    <p>{bio}</p>
+  </div>
+);
+
+export default UserInfo;
+
+// UserPosts.js
+import React from 'react';
+
+const UserPosts = ({ posts }) => (
+  <div>
+    {posts.map(post => (
+      <div key={post.id}>
+        <h3>{post.title}</h3>
+        <p>{post.content}</p>
+      </div>
+    ))}
+  </div>
+);
+
+export default UserPosts;
+6. Herramientas y Librerías
+Storybook: Te permite desarrollar y probar componentes de manera aislada.
+PropTypes: Usa PropTypes para definir y validar los tipos de props que tus componentes esperan.
+ESLint y Prettier: Usa linters y formateadores para mantener un estilo de código consistente.
+7. Refactorización Continua
+Revisiones regulares: Revisa y refactoriza tu código regularmente. Lo que parece una buena decisión al principio puede cambiar a medida que el proyecto crece.
+Pruebas unitarias: Escribe pruebas unitarias para tus componentes. Esto te ayudará a asegurarte de que cada componente funciona correctamente por separado.
+Con estos consejos, deberías estar bien encaminado para modularizar tus componentes en React de manera eficiente y mantener un código limpio y mantenible. ¡Buena suerte!
+
+Para el API
+json server
 
 
 
