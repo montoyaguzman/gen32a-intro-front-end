@@ -7,8 +7,15 @@ function Home() {
     return (
         <>
             <SearchBar />
-            <ListCard />
-            <Card />
+
+            <ListCard>
+
+                <Card />
+                <Card />
+                <Card />
+
+            </ListCard>
+
         </>
     )
 }

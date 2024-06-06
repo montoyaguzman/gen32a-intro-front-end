@@ -1,9 +1,15 @@
 import './index.css'
 
-function ListCard() {
+function ListCard({ children }) {
     return (
-        <h1>ListCard works!</h1>
-    )
+        <>
+            <div className='container-list'>
+
+                {children}
+
+            </div>
+        </>
+    );
 }
 
 export { ListCard };
