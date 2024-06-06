@@ -1,12 +1,21 @@
 import './index.css';
+import deafultImage from '../../assets/img/default-photo.jpeg';
 
 function Card({ name, image, region, rank, team }) {
+
+    const imgStyles = {
+        width: '100%',
+        height: '100%'
+    };
+
+    // const name = nameStudent || '';
+
     return (
         <>
             <div className='container-card'>
 
                 <div className="image-trainer">
-                    <img src={image} alt="imagen del entrenador" />
+                    <img src={image || deafultImage} alt="imagen del entrenador" style={imgStyles} />
                 </div>
                 <div className="card-content">
                     <div className="stats">

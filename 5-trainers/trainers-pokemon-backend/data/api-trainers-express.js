@@ -282,7 +282,7 @@ const trainers = [
     id: 9,
     name: 'Dawn',
     imgs: {
-      card: 'https://www.powergamingnetwork.com/wp-content/uploads/2021/07/dawn2.jpg',
+      card: '',
       display: 'https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f73d6b30-6514-4a15-95c9-ce229f3c9b41/width=450/00392-3232671932.jpeg'
     },
     rank: 30,
